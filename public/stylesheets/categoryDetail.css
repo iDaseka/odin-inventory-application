@@ -1,0 +1,80 @@
+.divisions{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainCol{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.itemName{
+    grid-column: 1;
+    padding: 0rem 1rem;
+}
+.itemDesc{
+    grid-column: 2;
+    padding: 0rem 2rem;
+}
+.itemPrice{
+    display: flex;
+    justify-content: center;
+    grid-column: 3;
+    padding: 0rem 1rem;
+}
+.itemStock{
+    display: flex;
+    justify-content: center;
+    grid-column: 4;
+    padding: 0rem 1rem;
+}
+
+
+.divisions_OOS{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.mainCol{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.categoryName_OOS{
+    display: flex;
+    justify-content: center;
+    grid-column: 1;
+    padding: 0rem 1rem;
+}
+
+.itemName_OOS{
+    grid-column: 2;
+    padding: 0rem 1rem;
+}
+.itemDesc_OOS{
+    grid-column: 3;
+    padding: 0rem 2rem;
+}
+.itemPrice_OOS{
+    display: flex;
+    justify-content: center;
+    grid-column: 4;
+    padding: 0rem 1rem;
+}
+.itemStock_OOS{
+    display: flex;
+    justify-content: center;
+    grid-column: 5;
+    padding: 0rem 1rem;
+}

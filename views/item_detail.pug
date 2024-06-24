@@ -1,0 +1,16 @@
+extends layout
+
+block content 
+    h1 This is the information of #{item.name}
+
+    p #[strong Category]: #{item.category.name}
+    p #[strong Description]: #{item.description}
+    p #[strong Price]: $#{item.price}
+    p #[strong Stock]: #{item.stock}
+
+    hr
+    h2 What do you want to do?
+    p
+        a(href=item.url + '/update') Edit
+    p
+        a(href=item.url + '/delete') Delete

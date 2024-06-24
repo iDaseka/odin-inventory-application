@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+    h1 You selected the category #[strong #{category.name}]
+
+    if item_list.length
+        h2 To delete the category, first you have to delete every item in it.
+        p 
+        a(href=category.url + '/update') Rename 
+    else
+        h2 What do you want to do?
+        p
+        a(href=category.url + '/update') Rename
+        p 
+        a(href=category.url + '/delete') Delete

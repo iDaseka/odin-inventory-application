@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    block head
+      title= title
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width' initial-scale='1')
+      link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='container')
+      div(class='sidebar')
+        block sidebar
+          li
+          a(href='/inventory') #[strong Home]
+          hr
+          li 
+          a(href='/inventory/categories/create') Create new #[strong Category]
+          li
+          a(href='/inventory/item/create') Create new #[strong Item]
+          hr 
+          if category_list
+            ul 
+              each category in category_list 
+                li 
+                  a(href=category.url) #{category.name}
+            li
+              a(href='/inventory/out_of_stock' style='color:red') Out of Stock
+      div(class='content') 
+        block content

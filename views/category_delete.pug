@@ -1,0 +1,10 @@
+extends layout 
+
+block content 
+    h1 #{title}: #{category.name}
+
+    p Are you sure you want to delete this #[strong Category]?
+    form(method='POST')
+        div.form-group
+            input#id.form-control(type='hidden' name='id' value=category._id)
+        button.btn.btn-primary(type='submit') Delete

@@ -1,0 +1,21 @@
+extends layout
+block head
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/categoryDetail.css')
+block content 
+    h1
+        a(href=category.url + '/selected') #{title}
+
+    if item_list.length
+        ul(class='divisions')
+                p(class='mainCol')  Item
+                p(class='mainCol') Description
+                p(class='mainCol')  Price
+                p(class='mainCol')  Stock
+                each item in item_list
+                        a(href=item.url class='itemName') #{item.name}
+                        p(class='itemDesc') #{item.description}
+                        p(class='itemPrice') $#{item.price}
+                        p(class='itemStock') #{item.stock}
+    else
+        p This category has no #[strong items].

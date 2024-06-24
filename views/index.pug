@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the #[em Inventory], here you can see how many categories and items we have! 
+
+  ul 
+    li #[strong Categories:] !{category_count}
+    li #[strong Items:] !{item_count}
+    li #[strong Out of Stock:] !{out_of_stock_count}
